@@ -47,7 +47,7 @@ The models are trained on the PBC dataset and tested on the Raabin-WBC dataset. 
 
 **Loss Function:** Cross-Entropy Loss
 
-**Training Parameters:""
+**Training Parameters:**
 
 - **Epochs:** 20
 
