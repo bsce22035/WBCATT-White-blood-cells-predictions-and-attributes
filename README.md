@@ -35,9 +35,9 @@ The models are trained on the PBC dataset and tested on the Raabin-WBC dataset. 
 ## Model Workflow
 1. Data Preprocessing
 
-Resize all images to the input size required by each model.
+  Resize all images to the input size required by each model.
 
-Normalize pixel values (ImageNet normalization for pretrained models).
+  Normalize pixel values (ImageNet normalization for pretrained models).
 
 2. Model Training
 
@@ -45,89 +45,45 @@ Normalize pixel values (ImageNet normalization for pretrained models).
 
 **Optimizer:** Adam or SGD
 
-Loss Function: Cross-Entropy Loss
+**Loss Function:** Cross-Entropy Loss
 
-Training Parameters:
+**Training Parameters:""
 
-Epochs: 20
+- **Epochs:** 20
 
-Batch size: 32
+- **Batch size:** 32
 
-Checkpointing: Save the model after every 5 epoch.
+- **Checkpointing:** Save the model after every 5 epoch.
 
 3. Evaluation on Raabin-WBC
 
-Load the saved best checkpoint.
+- Load the saved best checkpoint.
 
-Perform inference on the Raabin-WBC dataset.
+- Perform inference on the Raabin-WBC dataset.
 
-Compute metrics:
+- **Compute metrics:**
 
-Accuracy per cell type
+- Accuracy per cell type
 
-Attribute-wise performance (shape, size, granularity)
+- Attribute-wise performance (shape, size, granularity)
 
-Generate confusion matrices and visualizations for analysis.
+- Generate confusion matrices and visualizations for analysis.
 
 4. Analysis
 
-Cell-wise analysis: Performance per WBC type (e.g., Neutrophil, Lymphocyte, Monocyte, Eosinophil, Basophil)
+- Cell-wise analysis: Performance per WBC type (e.g., Neutrophil, Lymphocyte, Monocyte, Eosinophil, Basophil)
 
-Attribute-wise analysis: Performance based on features like:
+- Attribute-wise analysis: Performance based on features like:
 
-Shape
++ Shape
 
-Size
++ Size
 
-Granularity
++ Granularity
 
-Compare all five models to identify strengths and weaknesses.
+- Compare all five models to identify strengths and weaknesses.
 
-Directory Structure
-project/
-│
-├── data/
-│   ├── PBC/              # Training dataset
-│   └── Raabin-WBC/       # Testing dataset
-│
-├── checkpoints/          # Saved best models per architecture
-│   ├── vgg16_best.pth
-│   ├── resnet50_best.pth
-│   ├── vit_b16_best.pth
-│   ├── efficientnet_best.pth
-│   └── convnext_best.pth
-│
-├── scripts/
-│   ├── train.py           # Training script for all models
-│   ├── test.py            # Testing script on Raabin-WBC
-│   └── analyze.py         # Cell-wise and attribute-wise analysis
-│
-├── results/
-│   ├── metrics/           # Accuracy, F1-score, confusion matrices
-│   └── visualizations/    # Plots of predictions and analysis
-│
-└── README.md              # Project documentation
-How to Run
-Training
-python scripts/train.py --model vgg16 --dataset PBC --epochs 50 --batch_size 32
 
-Replace vgg16 with resnet50, vit_b16, efficientnet, or convnext to train other models.
-
-Testing
-python scripts/test.py --model vgg16 --checkpoint checkpoints/vgg16_best.pth --dataset Raabin-WBC
-Analysis
-python scripts/analyze.py --predictions results/vgg16_predictions.csv --attributes data/Raabin-WBC/attributes.csv
-Results
-
-Models achieve high accuracy on the PBC dataset.
-
-Testing on Raabin-WBC evaluates cross-dataset generalization.
-
-Confusion matrices highlight misclassifications per WBC type.
-
-Attribute-wise analysis provides insight into strengths and weaknesses of each model.
-
-Notes
 
 Pretrained weights from ImageNet are used where applicable.
 
