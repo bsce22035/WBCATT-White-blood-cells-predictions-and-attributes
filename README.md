@@ -92,3 +92,14 @@ The models are trained on the PBC dataset and tested on the Raabin-WBC dataset. 
 - Confusion matrices highlight misclassifications per WBC type.
 
 - Attribute-wise analysis provides insight into strengths and weaknesses of each model.
+
+## Notebooks
+
+You can open and run the full code for each model in Google Colab:
+
+- **VGG16:** [Open in Colab](https://colab.research.google.com/drive/1zyKDCcAjwgC5xudZRHDvc_GumOUQaV0U?usp=sharing)  
+- **ResNet50:** [Open in Colab](https://colab.research.google.com/drive/1UoHFk_smUQ0HOwFiko6zhyxpopWA6Bx5?usp=sharing)  
+- **ViT-B16:** [Open in Colab](https://colab.research.google.com/drive/1RwEjt8Pf9Co9YH0A04LvS74TouIvT49m?usp=sharing)  
+- **EfficientNet:** [Open in Colab](https://colab.research.google.com/drive/1wtqzTh_SuErx9AMiF-koRLJzTv2cIncF?usp=sharing)  
+- **ConvNeXt:** [Open in Colab](https://colab.research.google.com/drive/1OLtVKfV7H4GupQUGZCHAMaDd3pf2MDvt?usp=sharing)  
+- **Testing & Analysis:** [Open in Colab](https://colab.research.google.com/drive/1xShZJwC5tS7pmr7bP8MFiDpKkKxiqxC3?usp=sharing)
