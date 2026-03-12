@@ -75,18 +75,20 @@ The models are trained on the PBC dataset and tested on the Raabin-WBC dataset. 
 
 - Attribute-wise analysis: Performance based on features like:
 
-+ Shape
+  + Shape
 
-+ Size
+  + Size
 
-+ Granularity
+  + Granularity
 
 - Compare all five models to identify strengths and weaknesses.
 
+## Results
 
+- Models achieve high accuracy on the PBC dataset.
 
-Pretrained weights from ImageNet are used where applicable.
+- Testing on Raabin-WBC evaluates cross-dataset generalization.
 
-Checkpoints ensure reproducibility and enable evaluation on other datasets.
+- Confusion matrices highlight misclassifications per WBC type.
 
-Analysis scripts generate numeric metrics and visualization plots.
+- Attribute-wise analysis provides insight into strengths and weaknesses of each model.
